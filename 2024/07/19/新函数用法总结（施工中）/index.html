@@ -3,7 +3,7 @@
     <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
-    <meta name="description" content="" />
+    <meta name="description" content="新函数用法总结（施工中）" />
     <meta name="hexo-theme-A4" content="v1.6.9" />
     <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
     <title>米Miwa | </title>
@@ -70,52 +70,66 @@
 
                     
                     
-                        <div class="archive-list">
-  <ul class="archive">
-
-    
-    <span>🔖<i>饼干</i></span>
-      
-      
-      
-          
-    
-    
-  
-    
-        <li>
-          <span class="archive-date">2024/07/19</span>
-          <div class="archive-main">
-              <a class="archive-title" href="/2024/07/19/%E6%96%B0%E5%87%BD%E6%95%B0%E7%94%A8%E6%B3%95%E6%80%BB%E7%BB%93%EF%BC%88%E6%96%BD%E5%B7%A5%E4%B8%AD%EF%BC%89/">新函数用法总结（施工中）</a>
-          </div>
-        </li>
-    
-  
-    
-        <li>
-          <span class="archive-date">2023/07/05</span>
-          <div class="archive-main">
-              <a class="archive-title" href="/2023/07/05/cold/">“あとで”——“外星人感冒”的维c银翘片</a>
-          </div>
-        </li>
-    
-  
-    
-        <li>
-          <span class="archive-date">2023/06/16</span>
-          <div class="archive-main">
-              <a class="archive-title" href="/2023/06/16/the-first-article/">完全不会代码的娃子想建博客</a>
-          </div>
-        </li>
-    
-  
-  </ul>
-</div>
-
- 
-                    
                     
                     <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            新函数用法总结（施工中）
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Unique-%E5%8E%BB%E9%87%8D%E5%87%BD%E6%95%B0"><span class="post-toc-text">Unique-去重函数</span></a></li></ol>
+        
+        <h3 id="Unique-去重函数"><a href="#Unique-去重函数" class="headerlink" title="Unique-去重函数"></a>Unique-去重函数</h3><p>基本用法-竖向去重</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=unique(一列数)</span><br></pre></td></tr></table></figure>
+
+<p>横向去重并罗列</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=textjoin(&quot;,&quot;unique(一行数,1))</span><br><span class="line">其中的1代表是横向去重的，0则是竖向去重，0可以被省略而默认</span><br></pre></td></tr></table></figure>
+
+<p>返回只出现一次的值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=unique(一列数,0,1)</span><br><span class="line">0代表竖向去重，第三位的1代表只出现一次，平时不填则是默认0,代表所有情况</span><br></pre></td></tr></table></figure>
+
+<p>中国式排名</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">总体思路==sum()+1   ==区域内去重后的值大于我的单元格的总量，加上1，就是我的排名</span><br><span class="line">=sum（(unique(一列数)&gt;我格)*1）+1</span><br><span class="line">其中，unique(一列数)&gt;我格，这个的结果是一列ture或者false，乘上1，就会变成一列1或者0，再sum合计一下，再加一位，就是中国式的排名</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2024-07-19</span>
+            
+                <span>该篇文章被 JennieMiwa</span>
+            
+            
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E9%A5%BC%E5%B9%B2/'>
+                            饼干
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    
+        
+
+     
+</div>
+
+
+
                     
                     
                     <div class="footer">
